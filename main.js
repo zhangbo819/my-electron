@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserView, BrowserWindow, Menu } = require('electron')
 // const { BrowserWindow } = remote;
 
 // 保持对window对象的全局引用，如果不这么做的话，当JavaScript对象被
@@ -12,14 +12,22 @@ function createWindow() {
         height: 600,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        backgroundColor: '#fff'
     })
 
     // win.setProgressBar(0.5)
 
-    // 加载index.html文件
-    win.loadFile('./dist/index.html')
+    
+    let view = new BrowserView()
+    win.setBrowserView(view)
+    view.setBounds({ x: 0, y: 200, width: 300, height: 400 }) 
 
+    view.webContents.loadURL('https://electronjs.org')
+
+    // // 加载index.html文件
+    win.loadFile('./dist/index.html')
+    
     // 打开开发者工具
     // win.webContents.openDevTools()
 
