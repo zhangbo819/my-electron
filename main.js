@@ -21,9 +21,9 @@ function createWindow() {
     
     let view = new BrowserView()
     win.setBrowserView(view)
-    view.setBounds({ x: 0, y: 200, width: 300, height: 400 }) 
+    view.setBounds({ x: 0, y: 100, width: 800, height: 600 }) 
 
-    view.webContents.loadURL('https://electronjs.org')
+    view.webContents.loadURL('https://zhangbo819.github.io/code_Resource/')
 
     // // 加载index.html文件
     win.loadFile('./dist/index.html')
