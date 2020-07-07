@@ -16,7 +16,7 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "electron": "^6.0.10",
+    "electron": "^7.2.4",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
